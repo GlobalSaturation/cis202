@@ -43,9 +43,10 @@ public:
         IN ORDER TO HAVE THE PROPER OUTPUT TO PASS THE TEST.
         */
 	//send private data members to os in order
-	    os << "Flight " << record.flightNo << ": " << record.date <<
-	    " | Customer: " << record.customer << " | Booster Landing: " <<
-	    record.boosterLanding << " | Launch Site: " << record.launchSite << "\n";
+	    os << "Flight " << record.flightNo << ": " << record.date << " "
+	    << record.time << " | Customer: " << record.customer << " | Outcome: "
+	    << record.launchOutcome << " | Booster Landing: " << record.boosterLanding
+	    << " | Launch Site: " << record.launchSite << "\n";
 	    return os;
     }
 };
