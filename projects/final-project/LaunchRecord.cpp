@@ -1,6 +1,6 @@
-#include <iostream>
-#include <fstream>
-#include <sstream>
+//#include <iostream>
+//#include <fstream>
+//#include <sstream>
 #include "LaunchRecord.h"
 
 LaunchRecord::LaunchRecord(const vector<string>& fields) {
@@ -20,6 +20,7 @@ LaunchRecord::LaunchRecord(const vector<string>& fields) {
 }
 
 void LaunchRecord::display() const {
+    //calls the overloaded operator to send private members to cout
     cout << *this;
 }
 
