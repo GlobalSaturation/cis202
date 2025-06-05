@@ -11,6 +11,8 @@ using namespace std;
 
 void searchByCustomer(const vector<LaunchRecord>& records, const string& customer);
 void searchByOutcome(const vector<LaunchRecord>& records, const string& outcome);
+void searchByLaunchSite(const vector<LaunchRecord>& records, const string& outcome);
+void searchByBoosterLanding(const vector<LaunchRecord>& records, const string& outcome);
 
 #endif // SEARCH_H
 

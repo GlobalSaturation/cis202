@@ -3,6 +3,7 @@
 #include "LaunchRecord.h"
 #include "file_utils.h"
 // There may be a missing header file include here
+#include "search.h"
 
 using namespace std;
 
@@ -26,6 +27,15 @@ int main() {
    /*
      2 more search functions need to go here.
    */
+    cout << "\nEnter launch site to search: ";
+    getline(cin, input);
+    searchByLaunchSite(records, input);
+
+    cout << "\nEnter booster landing to search: ";
+    getline(cin, input);
+    searchByBoosterLanding(records, input);
+
     return 0;
+
 }
 
