@@ -17,15 +17,19 @@ vector<string> parseCSVLine(const string& line) {
         char c = line[i];
 
         if (c == '"') {
+            //toggle inquotes true or false
             inQuotes = !inQuotes;
         } else if (c == ',' && !inQuotes) {
+            //if we reached a comma and are outside of quotes, add word token to vector
             result.push_back(token);
             token.clear();
         } else {
+            //add current char to our word token
             token += c;
         }
     }
     result.push_back(token);
+    //the finished results is the parsed words without 
     return result;
 }
 
@@ -41,6 +45,7 @@ vector<LaunchRecord> loadLaunchRecords(const string& filename) {
             firstLine = false;
             continue;
         }
+        //store a vector of launchRecord objects that each have the parsed data from each line
         vector<string> fields = parseCSVLine(line);
         records.emplace_back(fields);
     }
